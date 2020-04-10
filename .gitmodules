@@ -1,4 +1,0 @@
-[submodule "text-security"]
-	path = text-security
-	url = https://github.com/noppa/text-security.git
-	branch = version-3
