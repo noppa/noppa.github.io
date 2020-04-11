@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <title>text-security font demo</title>
-  <link href="assets/text-security.css" rel="stylesheet" type="text/css" />
+  <link href="assets/text-security/text-security.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <style>
     html {
       font-size: 16px;
-      min-height: 100%;
-      position: relative;
     }
     body {
       font-family: Arial;
@@ -21,9 +19,8 @@
       color: #111;
       margin: 0px;
       padding: 0px;
-      /* Hacky solution to make the dropping balls visible after the
-        absolutely positioned main-element ends. */
-      min-height: 90rem;
+      padding-bottom: 200px;
+      position: relative;
     }
     header {
       padding: 20px 10px 100px 10px;
@@ -36,9 +33,8 @@
     main {
       padding: 4rem 0rem;
       margin-top: 2rem;
-      margin-bottom: 200px;
       background: #fff;
-      position: absolute;
+      position: relative;
       z-index: 110;
       left: 0;
       width: 100%;
@@ -124,6 +120,7 @@
       left: 0;
       overflow: hidden;
       position: absolute;
+      margin-bottom: -1px;
       pointer-events: none;
     }
 
