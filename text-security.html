@@ -42,7 +42,7 @@
       border-top: 4px solid #111;
       border-bottom: 4px solid #111;
     }
-    .content-wrap {
+    .content-wrap, .table-wrap {
       display: inline-block;
     }
     td {
@@ -176,65 +176,66 @@
 
   <main>
     <div class="content-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>shape</th>
-            <th>
-              text-securty font
-            </th>
-            <th>
-              -webkit-text-security<br/>
-              <small>(only works in WebKit-based browsers, like Chrome)</small>
-            </th>
-            <th>
-              password field
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              disc<br/>
-              <small>(the usual password field shape)</small>
-            </td>
-            <td>
-              <input type="text" style="font-family: text-security-disc;" value="🕵️ foo [某" />
-            </td>
-            <td>
-              <input type="text" style="-webkit-text-security: disc;" value="🕵️ foo [某" />
-            </td>
-            <td>
-              <input type="password" value="🕵️ foo [某" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              circle
-            </td>
-            <td>
-              <input type="text" style="font-family: text-security-circle;" value="🕵️ foo [某" />
-            </td>
-            <td>
-              <input type="text" style="-webkit-text-security: circle;" value="🕵️ foo [某" />
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              square
-            </td>
-            <td>
-              <input type="text" style="font-family: text-security-square;" value="🕵️ foo [某" />
-            </td>
-            <td>
-              <input type="text" style="-webkit-text-security: square;" value="🕵️ foo [某" />
-            </td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-  
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>shape</th>
+              <th>
+                text-securty font
+              </th>
+              <th>
+                -webkit-text-security<br />
+                <small>(only works in WebKit-based browsers)</small>
+              </th>
+              <th>
+                password field
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                disc
+              </td>
+              <td>
+                <input type="text" style="font-family: text-security-disc;" value="🕵️ foo [某" />
+              </td>
+              <td>
+                <input type="text" style="-webkit-text-security: disc;" value="🕵️ foo [某" />
+              </td>
+              <td>
+                <input type="password" value="🕵️ foo [某" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                circle
+              </td>
+              <td>
+                <input type="text" style="font-family: text-security-circle;" value="🕵️ foo [某" />
+              </td>
+              <td>
+                <input type="text" style="-webkit-text-security: circle;" value="🕵️ foo [某" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                square
+              </td>
+              <td>
+                <input type="text" style="font-family: text-security-square;" value="🕵️ foo [某" />
+              </td>
+              <td>
+                <input type="text" style="-webkit-text-security: square;" value="🕵️ foo [某" />
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <h2>Installation</h2>
       <code>
         npm install text-security
