@@ -47,6 +47,7 @@
     #info {
       display: flex;
       flex-wrap: wrap;
+      margin-top: 4rem;
     }
     #info > * {
       flex: 1;
@@ -54,7 +55,7 @@
       min-width: 300px;
     }
 
-    @media screen and (orientation: portrait) {
+    @media (min-width: 320px) and (max-width: 500px) {
       #info {
         flex-direction: column;
       }
@@ -64,13 +65,14 @@
       white-space: nowrap;
     }
 
-    .content-wrap, .table-wrap {
+    .content-wrap, .table-wrap, .table-wrap-outer {
       display: inline-block;
     }
     .content-wrap {
       width: 100%;
     }
-    .table-wrap {
+    .table-wrap-outer {
+      width: 100%;
       overflow-y: auto;
     }
     td {
@@ -90,7 +92,6 @@
     }
     h2 {
       font-size: 1.2rem;
-      margin-top: 4rem;
     }
     header h2 {
       margin-top: -2rem;
@@ -200,64 +201,66 @@
 
   <div class="main">
     <div class="content-wrap">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>shape</th>
-              <th>
-                text-securty font
-              </th>
-              <th>
-                -webkit-text-security<br />
-                <small>(only works in WebKit-based browsers)</small>
-              </th>
-              <th>
-                password field
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                disc
-              </td>
-              <td>
-                <input type="text" style="font-family: text-security-disc;" value="🕵️ foo [某" />
-              </td>
-              <td>
-                <input type="text" style="-webkit-text-security: disc;" value="🕵️ foo [某" />
-              </td>
-              <td>
-                <input type="password" value="🕵️ foo [某" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                circle
-              </td>
-              <td>
-                <input type="text" style="font-family: text-security-circle;" value="🕵️ foo [某" />
-              </td>
-              <td>
-                <input type="text" style="-webkit-text-security: circle;" value="🕵️ foo [某" />
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                square
-              </td>
-              <td>
-                <input type="text" style="font-family: text-security-square;" value="🕵️ foo [某" />
-              </td>
-              <td>
-                <input type="text" style="-webkit-text-security: square;" value="🕵️ foo [某" />
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="table-wrap-outer">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>shape</th>
+                <th>
+                  text-securty font
+                </th>
+                <th>
+                  -webkit-text-security<br />
+                  <small>(only works in WebKit-based browsers)</small>
+                </th>
+                <th>
+                  password field
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  disc
+                </td>
+                <td>
+                  <input type="text" style="font-family: text-security-disc;" value="🕵️ foo [某" />
+                </td>
+                <td>
+                  <input type="text" style="-webkit-text-security: disc;" value="🕵️ foo [某" />
+                </td>
+                <td>
+                  <input type="password" value="🕵️ foo [某" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  circle
+                </td>
+                <td>
+                  <input type="text" style="font-family: text-security-circle;" value="🕵️ foo [某" />
+                </td>
+                <td>
+                  <input type="text" style="-webkit-text-security: circle;" value="🕵️ foo [某" />
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  square
+                </td>
+                <td>
+                  <input type="text" style="font-family: text-security-square;" value="🕵️ foo [某" />
+                </td>
+                <td>
+                  <input type="text" style="-webkit-text-security: square;" value="🕵️ foo [某" />
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div id="info">
