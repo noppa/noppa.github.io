@@ -59,6 +59,11 @@
       #info {
         flex-direction: column;
       }
+      /* On mobile, reduce the amount of balls we have flying around */
+      .bg-disc:nth-child(even) {
+        display: none;
+        animation: none;
+      }
     }
 
     .no-break {
